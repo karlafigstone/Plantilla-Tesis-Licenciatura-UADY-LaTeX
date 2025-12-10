@@ -1,0 +1,99 @@
+%----------------------------------------------------------
+% Autor: Karla A. Figueroa
+% email: karlafigueroa186@gmail.com
+
+% Comparto la plantilla del documento que hice para escribir
+% mi tesis de licenciatura.
+% Cumple con los requisitos de la Facultad de Matemáticas
+% de la UADY: páginas a una sola cara, numeración romana
+% hasta antes de la introduccion, datos de portada, etc.
+% Agregué paquetes y algunos comentarios de su función,
+% asi como ejemplos de su uso.
+%---------------------------------------------------------
+\documentclass[letterpaper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2.5cm, left=3cm, right=2.5cm, bottom=2.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5} % espaciado 1.5
+\parindent = 0mm % Sin sangría
+\usepackage[T1]{fontenc}
+% --- Paquetes de mates ---
+\usepackage{mathptmx}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{latexsym,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
+% --- Imágenes ---
+\usepackage{graphicx} % insertar imégenes
+\usepackage{subfig} % insertar varias imagenes
+% --- Formato ---
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow} % combina celdas
+\usepackage{xcolor, colortbl}
+\usepackage[spanish, es-lcroman, es-tabla]{babel}\decimalpoint % Idioma español
+\usepackage{caption} % Paquete para personalizar captions
+\captionsetup{font=footnotesize} % Configura el tamaño de la fuente para captions
+\usepackage{tabularx}
+\usepackage{xfrac}
+% --- Estilo ---
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+\fancyhf{} 
+\fancyfoot[R]{\thepage}} %enumera las páginas a la derecha
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt} %quita la linea del encabezado de pagina
+% --- Estilo para resultados ---
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{corolario}[teorema]{Corolario}
+% --- Estilo para definiciones, etc ---
+\theoremstyle{definicion}
+\newtheorem{definicion}[teorema]{Definición}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{observacion}[teorema]{Observación}
+\renewcommand{\proofname}{Demostración} %cambia el nombre a demostracion
+
+\usepackage{natbib}
+\usepackage{hyperref} %permite poner hiperreferencias o links
+\usepackage[nottoc]{tocbibind} %agrega la bibliografia al indice
+
+
+% --- DOCUMENTO ---
+% se modifica el contenido en cada archivo .tex que se
+% encuentra dentro de la carpeta 'capitulos'
+% si no necesitas aguna sección solo debes comentarla
+\begin{document}
+
+% --- Portada ---
+% debes agregar tus datos en el archivo portada.tex
+\include{portada}
+
+% --- Resumen, dedicatoria, agradecimientos ---
+\include{capitulos/resumen-y-mas}
+
+% --- Tabla de contenidos ---
+\hypersetup{pdfborder=0 0 0} %quita los recuadros del vinculo
+\renewcommand*\contentsname{\'Indice general} %renombra el índice
+\tableofcontents %crea el índice
+\listoffigures
+\listoftables
+
+% --- Cuerpo de la tesis ---
+\include{capitulos/introduccion}
+\include{capitulos/objetivo}
+\include{capitulos/marco-teorico}
+\include{capitulos/metodologia}
+\include{capitulos/resultados}
+\include{capitulos/concluisones}
+\include{capitulos/apendice}
+
+% --- Bibliografía ---
+\bibliographystyle{plainnat} %las referencias con nombre
+%\bibliographystyle{unsrt} %las referencias con número
+\bibliography{referencias} %aqui pones tu archivo .bib
+
+\end{document}

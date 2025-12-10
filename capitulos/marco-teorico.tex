@@ -1,0 +1,72 @@
+\chapter{Marco te\'orico} %\label{mteorico}
+Puedes citar de la siguiente manera: \cite{Boyce1965,Currie2012, Groetsch1993,Stewart2008}. Lo que cites aparecerá en la bibliografía.
+
+\section{Definiciones, teoremas y demostraciones}
+\begin{definicion}
+Una funci\'on $f$ es lipschitziana si...
+\end{definicion}
+
+\begin{teorema}
+Sea $f$ continua en $[a,b]$. Entonces...
+\end{teorema}
+
+\begin{proof}
+Aqu\'i va la demostraci\'on.\\
+Como $f$ es continua...
+\end{proof}
+
+\begin{ejemplo}
+La funci\'on $f(x)=|x|$ es lipschitziana.
+\end{ejemplo}
+
+\section{Agregar ecuaciones}
+
+Para agregar ecuaciones
+\begin{equation}\label{cons_moment}
+    \frac{\partial u}{\partial t}+u\cdot\nabla u=\frac{\mu}{\rho}\nabla^{2} u-\frac{1}{\rho}\nabla p+f,
+\end{equation}
+Para hacer referencia a la Ecuaci\'on \eqref{cons_moment} poniendole una etiqueta (label). Si no quieres enumerarla usa un asterisco en el entorno
+\begin{equation*}
+    \frac{\partial u}{\partial t}+u\cdot\nabla u=\frac{\mu}{\rho}\nabla^{2} u-\frac{1}{\rho}\nabla p+f,
+\end{equation*}
+
+Si la ecuaci\'on es muy larga la puedes dividir
+\begin{multline}\label{osc_comp2}
+    \sin^{2}{\theta}+ 2\sin{\theta}\cos{\theta} +\frac{\sin{\theta}\sin{\phi}} +\left(\frac{2\pi}{2}\right)^{2}(\sin{\phi}\cos{\phi}\sin^{2}{\theta})\\ +\frac{2}{\pi}(\sin{\phi}+\cos{\phi}) + 2\sin{\theta}\cos{\theta} =0.
+\end{multline}
+
+\section{Agregar tablas y combinar celdas}
+
+\begin{table}[h!] % h indica 'here' es la ubicacion de la tabla
+    \centering
+    \caption{Titulo de la tabla}
+    \begin{tabularx}{0.4\textwidth}{cccc} % c es la columna
+        \hline
+         & Ramas & $a_4$ & $a_3$\\ \hline
+        \multirow{2}{*}{$x$} & A & $0$ & $0$ \\
+        &B & $1\times10^{-4}$ & $-1\times10^{-4}$ \\ \hline
+    \end{tabularx}
+    \label{tab:tabla1}
+\end{table}
+Para hacer referencia a la Tabla \ref{tab:tabla1}
+
+\section{Agregar im\'agenes y grupos de imágenes}
+\begin{figure}[ht]
+   \centering
+   \includegraphics[scale=0.2]{figuras/ejemplo1.PNG}
+   \caption{Figura1}
+   \label{fig:figura1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \subfloat[Subfigura1]{
+    \includegraphics[scale=0.2]{figuras/identidad.PNG}
+    \label{fig:ineal}}
+    \subfloat[Subfigura2]{
+    \includegraphics[scale=0.2]{figuras/parabola.PNG}
+    \label{fig:parab}} 
+    \caption{Figura2}
+   \label{fig:figura2}
+\end{figure}
+Puedes hacer referencia a la Figura \ref{fig:figura1} o a la Figura \ref{fig:ineal}.
