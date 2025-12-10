@@ -9,7 +9,7 @@ Su objetivo es servir como base editable para estudiantes que necesitan una estr
 ## 📁 Estructura del proyecto
 - main.tex # Archivo principal
 - portada.tex # Portada editable
-- referencias.bib # Archivo BibTeX de ejmplo para bibliografía
+- referencias.bib # Archivo BibTeX de ejemplo para bibliografía
 - capitulos/ # Carpeta con capítulos organizados
 - figuras/ # Carpeta de figuras
 
@@ -21,5 +21,5 @@ Puedes agregar tus propias referencias siguiendo el mismo formato.
 Este proyecto se distribuye bajo la licencia MIT, lo que permite su uso, modificación y redistribución siempre que se mantenga el aviso de licencia.
 
 ## ✨ Créditos
-Plantilla creada por Karla Aracely Figueroa Pérez, 2025.
+Plantilla creada por Karla A. Figueroa, 2025.
 Puedes contribuir realizando pull requests o sugerencias.
